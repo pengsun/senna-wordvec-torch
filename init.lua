@@ -104,7 +104,7 @@ end
 --- main
 local function main(opt)
     local swe -- the wrapper to be returned
-    require'mobdebug'.start()
+    --require'mobdebug'.start()
     if not path.isfile(opt.pathMyt7) then -- generating t7 file
         print(myName .. ': reading Senna word list and embedding vecotrs from ')
         print(opt.pathSennaWord)
