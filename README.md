@@ -11,14 +11,14 @@ Note: Senna's words are all in lower case. Any number is replaced with 0.
 * run command ```git clone https://github.com/pengsun/senna-wordvec-torch```
 * cd to the directory.
   * open `init.lua`
-  * modify the two variables `opt.pathSennaWord` and `opt.pathSennaVec` to the corresponding files in your local machine.
-  * modify the `opt.pathMyt7`, where the t7 file will be saved, to the path you like 
+  * modify the two variables `opt.pathSennaWord` and `opt.pathSennaVec` to the corresponding Senna files in your local machine.
+  * modify the variable `opt.pathMyt7`, where the pre-saved t7 file will be put, to the path you like 
 * run command ```luarocks make```
 
-Then the lib will ba installed to your torch 7 directory. Delete the source directory if you like.
+Then the lib will ba installed to your torch 7 directory. Delete the git-cloned source directory `senna-wordvec-torch` if you like.
 
 ### Usage
-#### [FloatTensor] word2vec(self,word)
+#### [FloatTensor] word2vec(self, word)
 Takes as input a word in lua string, return the corresponding word vector. return `nil` if the word is out of vocabulary.
 
 #### [number] vec_size(self)
@@ -28,10 +28,10 @@ The embedded word vector size. Should be 50.
 to string.
 
 #### member variable `vocab`
-The word vocabulary. a lua table
+A lua table, the word vocabulary.
 
 #### member variable `vecs`
-The word vectors. 
+A `torch.FloatTensor`, the word vectors. 
 
 ###Examples
 
@@ -54,5 +54,7 @@ The word vectors.
 
 ###Reference
 [1] http://ml.nec-labs.com/senna/
+
 [2] https://github.com/torch/senna
+
 [3] https://github.com/rotmanmi/word2vec.torch
