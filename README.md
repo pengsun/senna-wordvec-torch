@@ -5,7 +5,7 @@ Note: Senna's words are all in lower case. Any number is replaced with 0.
 
 ### Prerequisites
 * Torch 7
-* Senna (see [1])
+* Senna (see [1]). Needs not be compiled, just the data files that come with Senna are needed, see below.
 
 ### Installation
 * run command ```git clone https://github.com/pengsun/senna-wordvec-torch```
